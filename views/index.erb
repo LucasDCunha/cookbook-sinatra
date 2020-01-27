@@ -1,0 +1,9 @@
+<ol>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <% recipe.done == "true" ? x = "x" : x = " " %>
+      <%= "[#{x}] ~ #{recipe.name} (#{recipe.time})" %>
+    </li>
+  <% end %>
+</ol>
+<a href="/new_rec">Add a new recipe</a>
